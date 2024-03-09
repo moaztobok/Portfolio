@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Elsie_Swash_Caps, Abril_Fatface, Inter } from "next/font/google";
+import { Elsie_Swash_Caps, Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/Navigation";
-import NavOther from "./components/NavOther";
 
 const inter = Inter({
   subsets: ["latin"],

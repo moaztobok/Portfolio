@@ -1,7 +1,5 @@
-import React from "react";
-import Hero from "./components/Hero";
 import Capabilities from "./components/Capabilities";
-import NavOther from "./components/NavOther";
+import Hero from "./components/Hero";
 
 const HomePage = () => {
   return (

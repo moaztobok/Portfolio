@@ -1,10 +1,9 @@
 "use client";
 
 import { animatePageIn } from "@/utils/animations";
-import next from "next";
 import { useEffect } from "react";
-import Navigation from "./components/Navigation";
 import NavOther from "./components/NavOther";
+import Navigation from "./components/Navigation";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
