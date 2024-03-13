@@ -1,6 +1,6 @@
 "use client";
 
-import { animateCursorAnimation, animatePageIn } from "@/utils/animations";
+import { animatePageIn } from "@/utils/animations";
 import { useEffect } from "react";
 import NavOther from "../components/NavOther";
 import Navigation from "../components/Navigation";

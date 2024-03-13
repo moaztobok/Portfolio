@@ -1,8 +1,4 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
 import { CircleArrowRight } from "lucide-react";
-import Image from "next/image";
 import AmazightIcon1 from "./AmazightIcon1";
 const info = [
   {
