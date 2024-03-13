@@ -54,7 +54,6 @@ const config = {
         },
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
         elsie: ["Elsie Swash Caps", "sans-serif"],
         abriFarface: ["Abril Fatface", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],

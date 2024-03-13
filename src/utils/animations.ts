@@ -21,12 +21,17 @@ export const animatePageIn = () => {
       tl.set([nav], {
         xPercent: 0,
         opacity: 0,
-      }).to([nav], {
-        xPercent: -100,
-        opacity: 1,
-        duration: 0.3,
-        onComplete: () => animatTopNav(tl),
-      });
+      })
+        .to([nav], {
+          xPercent: -150,
+          opacity: 1,
+          duration: 0.2,
+          onComplete: () => animatTopNav(tl),
+        })
+        .to([nav], {
+          xPercent: -110,
+          duration: 0.2,
+        });
     }
     if (nav) {
       if (windowInnerWidth < 768) {

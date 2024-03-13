@@ -1,16 +1,19 @@
 "use client";
-import { Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
 
 const NavOther = () => {
   useEffect(() => {
     const html = document.querySelector("html");
-    if (
-      window.matchMedia("(prefers-color-scheme:dark").matches ||
-      localStorage.getItem("theme") === "dark"
-    ) {
-      if (html) html.classList.add("dark");
+    if (localStorage.getItem("theme")) {
+      if (localStorage.getItem("theme") === "dark") {
+        if (html) html.classList.add("dark");
+      }
+    } else {
+      if (window.matchMedia("(prefers-color-scheme:dark").matches) {
+        if (html) html.classList.add("dark");
+      }
     }
   }, []);
   const handleTheme = () => {
@@ -33,14 +36,20 @@ const NavOther = () => {
       id="top-nav"
     >
       <button
-        className="w-10 h-10 aspect-square rounded-full bg-primary"
+        className="w-8 h-8 aspect-square rounded-full bg-primary relative"
         onClick={handleTheme}
       >
         <Sun
+          className="w-full h-full rotate-0 left-0 top-0 absolute  scale-75 transition-all dark:-rotate-90 dark:scale-0  fill-primary-foreground stroke-primary-foreground"
           size={24}
-          className="mx-auto fill-primary-foreground stroke-primary-foreground"
+        />
+
+        <Moon
+          className="w-full h-full  left-0 top-0 rotate-90 scale-0 absolute  transition-all dark:rotate-0 dark:scale-75  fill-primary-foreground stroke-primary-foreground"
+          size={24}
         />
       </button>
+
       <div className="text-primary flex gap-2">
         <Link href={"https://www.behance.net/MoazTobok"}>Behance</Link>
         {" /"}

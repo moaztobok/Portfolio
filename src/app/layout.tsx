@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Elsie_Swash_Caps, Inter } from "next/font/google";
+import { Elsie_Swash_Caps, Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "../components/theme-provider";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-});
-const elsie = Elsie_Swash_Caps({
-  subsets: ["latin"],
-  weight: ["400", "900"],
-});
 export const metadata: Metadata = {
   title: "Moaz Tobok",
   description: "Moaz Tobok's portfolio website",
 };
-
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={fontSans.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

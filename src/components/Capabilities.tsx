@@ -27,8 +27,9 @@ const info = [
 const Capabilities = () => {
   return (
     <div className="z-1 bg-primary/10 relative z-10 backdrop-blur-2xl py-10 overflow-hidden">
-      {/* <div className="w-[400px] aspect-square rounded-full bg-[#00FFF0] absolute -z-[1] blur-[100px] -bottom-1/2 left-0"></div>
-      <div className="w-[400px] aspect-square rounded-full bg-[#00FFF0] absolute -z-[1] blur-[100px] lg:-bottom-40 lg:top-auto -top-36 -right-40"></div> */}
+      <div className="w-[300px] md:w-[400px] aspect-square rounded-full bg-[#00FFF0] absolute -z-[1] blur-[100px] -bottom-14 md:-bottom-1/2 -left-52"></div>
+      <div className="w-[250px] md:w-[400px] aspect-square rounded-full bg-[#00FFF0] absolute -z-[1] blur-[100px] -top-14 md:-top-1/2 -right-52"></div>
+      {/* <div className="w-[400px] aspect-square rounded-full bg-[#00FFF0] absolute -z-[1] blur-[100px] lg:-bottom-40 lg:top-auto -top-36 -right-40"></div> */}
       <div className="w-full mx-auto grid grid-flow-row">
         <h1 className="align-middle font-abriFarface w-full inline-flex gap-2 text-4xl mb-10 text-primary max-container">
           Capabilities <CircleArrowRight size={42} />{" "}

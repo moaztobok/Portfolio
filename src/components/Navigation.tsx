@@ -16,19 +16,47 @@ const Navigation = () => {
         <div className="flex md:flex-col gap-5 w-full md:w-fit justify-between">
           <TransitionLink
             href="/"
-            icon={<FontAwesomeIcon icon={faHomeUser} width={32} />}
+            icon={
+              <FontAwesomeIcon
+                icon={faHomeUser}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            }
           />
           <TransitionLink
             href="/gallary"
-            icon={<FontAwesomeIcon icon={faImage} width={32} />}
+            icon={
+              <FontAwesomeIcon
+                icon={faImage}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            }
           />
           <TransitionLink
-            href="/gallary"
-            icon={<FontAwesomeIcon icon={faSquareRss} width={32} />}
+            href="/blog"
+            icon={
+              <FontAwesomeIcon
+                icon={faSquareRss}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            }
           />
           <TransitionLink
             href="#contact"
-            icon={<FontAwesomeIcon icon={faAddressCard} width={32} />}
+            icon={
+              <FontAwesomeIcon
+                icon={faAddressCard}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            }
           />
         </div>
       </div>
