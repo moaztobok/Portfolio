@@ -1,4 +1,3 @@
-import Titles from "@/components/Titles";
 import Capabilities from "../components/Capabilities";
 import Hero from "../components/Hero";
 
