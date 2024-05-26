@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Elsie_Swash_Caps, Inter as FontSans } from "next/font/google";
-import "./globals.css";
+import { Poppins } from "next/font/google";
 import { ThemeProvider } from "../components/theme-provider";
-import { cn } from "@/lib/utils";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Moaz Tobok",
   description: "Moaz Tobok's portfolio website",
 };
-const fontSans = FontSans({
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-sans",
 });
 export default function RootLayout({
   children,
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fontSans.className}>
+      <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

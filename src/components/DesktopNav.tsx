@@ -6,11 +6,11 @@ import {
   faAddressCard,
   faSquareRss,
 } from "@fortawesome/free-solid-svg-icons";
-const Navigation = () => {
+const DesktopNav = () => {
   return (
     <nav
-      className="w-full md:w-fit md:h-full h-fit flex justify-center  z-40 items-center md:left-full bottom-0 top-full md:top-0 fixed "
-      id="nav"
+      className="md:visible invisible w-full md:w-fit md:h-full h-fit flex justify-center  z-40 items-center md:left-full bottom-0 top-full md:top-0 fixed "
+      id="nav-table-desktop"
     >
       <div className="lg:w-fit w-full  h-fit md:py-6 md:px-2 py-4 px-10 bg-primary/25 backdrop-blur-md md:rounded-full rounded-t-3xl ">
         <div className="flex md:flex-col gap-5 w-full md:w-fit justify-between">
@@ -64,4 +64,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default DesktopNav;

@@ -1,9 +1,10 @@
 "use client";
 
+import MobileNav from "@/components/MobileNav";
 import { animatePageIn } from "@/utils/animations";
 import { useEffect } from "react";
+import Navigation from "../components/DesktopNav";
 import NavOther from "../components/NavOther";
-import Navigation from "../components/Navigation";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         className="min-h-screen bg-black z-50 fixed top-0 left-3/4 w-1/4"
       />
       <NavOther />
-
+      <MobileNav />
       <Navigation />
       {children}
     </div>
