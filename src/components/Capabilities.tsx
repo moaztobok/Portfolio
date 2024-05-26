@@ -1,9 +1,8 @@
 "use client";
-import { CircleArrowRight } from "lucide-react";
-import AmazightIcon1 from "./AmazightIcon1";
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
 import { animateInElements } from "@/utils/animations";
+import { CircleArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+import AmazightIcon1 from "./AmazightIcon1";
 const info = [
   {
     title: "Design guidance",

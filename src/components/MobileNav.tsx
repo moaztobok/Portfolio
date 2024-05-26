@@ -1,11 +1,11 @@
-import { TransitionLink } from "./TransitionLink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faAddressCard,
   faHomeUser,
   faImage,
-  faAddressCard,
   faSquareRss,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { TransitionLink } from "./TransitionLink";
 const MobileNav = () => {
   return (
     <nav
