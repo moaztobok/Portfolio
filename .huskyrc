@@ -1,5 +1,8 @@
 {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "hooks": {
+    "pre-commit": "pnpm run husky:pre-commit",
+    "commit-msg": "pnpm run husky:commit-msg",
+    "postcommit": "pnpm run husky:postcommit",
+    "post-rewrite": "pnpm run husky:post-rewrite"
+  }
 }
