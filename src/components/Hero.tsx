@@ -1,11 +1,11 @@
 import Button from './Button';
 const Hero = () => {
   return (
-    <section className=" max-container relative z-10 flex min-h-screen w-full flex-col items-center justify-center text-primary">
+    <section className="max-container relative z-10 flex min-h-screen w-full flex-col items-center justify-center text-primary">
       <div className="flex w-full flex-col items-center ">
         <h1
           id="item-1"
-          className="text-nowrap text-center font-elsie text-6xl font-black opacity-0 md:text-6xl lg:text-8xl "
+          className="text-nowrap text-center font-elsie text-4xl font-black opacity-0 md:text-6xl lg:text-8xl "
         >
           Moaz Tobok
         </h1>
