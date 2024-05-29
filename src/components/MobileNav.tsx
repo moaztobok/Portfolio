@@ -3,17 +3,17 @@ import {
   faHomeUser,
   faImage,
   faSquareRss,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { TransitionLink } from "./TransitionLink";
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { TransitionLink } from './TransitionLink';
 const MobileNav = () => {
   return (
     <nav
-      className="md:invisible w-full md:w-fit md:h-full h-full flex justify-center  z-40 items-end md:left-full bottom-0 top-full md:top-0 fixed"
+      className="fixed bottom-0 top-full z-40 flex h-full w-full  items-end justify-center md:invisible md:left-full md:top-0 md:h-full md:w-fit"
       id="nav-mobile"
     >
-      <div className="lg:w-fit w-full  h-fit md:py-6 md:px-2 py-4 px-10 bg-primary/25 backdrop-blur-md md:rounded-full rounded-t-3xl ">
-        <div className="flex md:flex-col gap-5 w-full md:w-fit justify-between">
+      <div className="h-fit w-full  rounded-t-3xl bg-primary/25 px-10 py-4 backdrop-blur-md md:rounded-full md:px-2 md:py-6 lg:w-fit ">
+        <div className="flex w-full justify-between gap-5 md:w-fit md:flex-col">
           <TransitionLink
             href="/"
             icon={
@@ -21,7 +21,7 @@ const MobileNav = () => {
                 icon={faHomeUser}
                 width={24}
                 height={24}
-                className="w-6 h-6"
+                className="h-6 w-6"
               />
             }
           />
@@ -32,7 +32,7 @@ const MobileNav = () => {
                 icon={faImage}
                 width={24}
                 height={24}
-                className="w-6 h-6"
+                className="h-6 w-6"
               />
             }
           />
@@ -43,7 +43,7 @@ const MobileNav = () => {
                 icon={faSquareRss}
                 width={24}
                 height={24}
-                className="w-6 h-6"
+                className="h-6 w-6"
               />
             }
           />
@@ -54,7 +54,7 @@ const MobileNav = () => {
                 icon={faAddressCard}
                 width={24}
                 height={24}
-                className="w-6 h-6"
+                className="h-6 w-6"
               />
             }
           />

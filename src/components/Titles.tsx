@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import { Card, Carousel } from "./ui";
-import Autoplay from "embla-carousel-autoplay";
+'use client';
+import React from 'react';
+import { Card, Carousel } from './ui';
+import Autoplay from 'embla-carousel-autoplay';
 const Titles = () => {
   return (
     <Carousel.Carousel
@@ -16,18 +16,18 @@ const Titles = () => {
     >
       <Carousel.CarouselContent>
         <Carousel.CarouselItem>
-          <Card.Card className=" border-none rounded-none">
-            <Card.CardContent className="flex h-96 border-none rounded-none items-center justify-center p-6">
-              <span className="text-9xl font-abriFarface text-center ">
+          <Card.Card className=" rounded-none border-none">
+            <Card.CardContent className="flex h-96 items-center justify-center rounded-none border-none p-6">
+              <span className="text-center font-abriFarface text-9xl ">
                 Photographer
               </span>
             </Card.CardContent>
           </Card.Card>
         </Carousel.CarouselItem>
         <Carousel.CarouselItem>
-          <Card.Card className=" border-none rounded-none">
-            <Card.CardContent className="flex h-96 border-none rounded-none items-center justify-center p-6">
-              <span className="text-9xl font-abriFarface text-center ">
+          <Card.Card className=" rounded-none border-none">
+            <Card.CardContent className="flex h-96 items-center justify-center rounded-none border-none p-6">
+              <span className="text-center font-abriFarface text-9xl ">
                 Photographer
               </span>
             </Card.CardContent>

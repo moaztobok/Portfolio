@@ -1,9 +1,9 @@
-"use client";
-import { animateInElements } from "@/utils/animations";
-import { CircleArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
-import AmazightIcon1 from "./AmazightIcon1";
-import AmazightIcon2 from "./AmazightIcon2";
+'use client';
+import { animateInElements } from '@/utils/animations';
+import { CircleArrowRight } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import AmazightIcon1 from './AmazightIcon1';
+import AmazightIcon2 from './AmazightIcon2';
 
 const Capabilities = () => {
   const trigger = useRef(null);
@@ -13,10 +13,10 @@ const Capabilities = () => {
   useEffect(() => {
     if (!trigger.current) return;
     if (!el0Ref.current || !el1Ref.current || !el2Ref.current)
-      return console.log("Element not found");
+      return console.log('Element not found');
     const animation = animateInElements(
       [el0Ref.current, el1Ref.current, el2Ref.current],
-      trigger
+      trigger,
     );
 
     return () => {
@@ -26,17 +26,17 @@ const Capabilities = () => {
 
   return (
     <div
-      className="bg-primary/10 relative z-10 backdrop-blur-2xl  overflow-hidden py-32"
+      className="relative z-10 overflow-hidden bg-primary/10  py-32 backdrop-blur-2xl"
       ref={trigger}
     >
-      <div className="w-full mx-auto grid grid-flow-row">
-        <h1 className="font-poppins font-black w-full inline-flex gap-2 text-4xl mb-5 text-primary max-container">
+      <div className="mx-auto grid w-full grid-flow-row">
+        <h1 className="max-container mb-5 inline-flex w-full gap-2 font-poppins text-4xl font-black text-primary">
           What i Do! <CircleArrowRight size={42} strokeWidth={2} />
         </h1>
-        <div className="max-container flex flex-col  lg:flex-row lg:divide-x-2 divide-primary gap-10">
+        <div className="max-container flex flex-col  gap-10 divide-primary lg:flex-row lg:divide-x-2">
           <div
             ref={el0Ref}
-            className="lg:ps-6 flex flex-col gap-3 mt-4 text-primary  w-3/4"
+            className="mt-4 flex w-3/4 flex-col gap-3 text-primary  lg:ps-6"
           >
             <AmazightIcon1 />
             <p className="text-3xl font-semibold">Design guidance</p>
@@ -47,7 +47,7 @@ const Capabilities = () => {
           </div>
           <div
             ref={el1Ref}
-            className="lg:ps-6 flex flex-col gap-3 mt-4 text-primary  w-3/4"
+            className="mt-4 flex w-3/4 flex-col gap-3 text-primary  lg:ps-6"
           >
             <AmazightIcon2 />
             <p className="text-3xl font-semibold">Web development</p>
@@ -58,7 +58,7 @@ const Capabilities = () => {
           </div>
           <div
             ref={el2Ref}
-            className="lg:ps-6 flex flex-col gap-3 mt-4 text-primary  w-3/4"
+            className="mt-4 flex w-3/4 flex-col gap-3 text-primary  lg:ps-6"
           >
             <AmazightIcon1 />
             <p className="text-3xl font-semibold">Art direction</p>

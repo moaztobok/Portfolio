@@ -1,6 +1,6 @@
-"use client";
-import { usePathname, useRouter } from "next/navigation";
-import { animatePageOut } from "@/utils/animations";
+'use client';
+import { usePathname, useRouter } from 'next/navigation';
+import { animatePageOut } from '@/utils/animations';
 
 interface Props {
   href: string;
@@ -17,7 +17,7 @@ export const TransitionLink = ({ href, label, icon }: Props) => {
   };
   return (
     <button
-      className=" text-white hover:opacity-90 duration-200 transition-all"
+      className=" text-white transition-all duration-200 hover:opacity-90"
       onClick={handleClick}
     >
       {label}

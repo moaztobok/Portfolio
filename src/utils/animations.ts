@@ -1,11 +1,11 @@
-import gsap from "gsap";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
-import { MutableRefObject } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import gsap from 'gsap';
+import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
+import { MutableRefObject } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 export const animateHeroItems = () => {
-  const item1 = document.getElementById("item-1");
-  const item2 = document.getElementById("item-2");
-  const item3 = document.getElementById("item-3");
+  const item1 = document.getElementById('item-1');
+  const item2 = document.getElementById('item-2');
+  const item3 = document.getElementById('item-3');
   if (item1 && item2 && item3) {
     const tl = gsap.timeline();
     tl.set([item1, item2, item3], {
@@ -20,8 +20,8 @@ export const animateHeroItems = () => {
 };
 export const animatePageIn = () => {
   const animateNav = (tl: GSAPTimeline) => {
-    const desktop_nav = document.getElementById("nav-table-desktop");
-    const mobile_nav = document.getElementById("nav-mobile");
+    const desktop_nav = document.getElementById('nav-table-desktop');
+    const mobile_nav = document.getElementById('nav-mobile');
 
     const windowInnerWidth = window.innerWidth;
     function handleMobileAnimation(nav: HTMLElement, tl: GSAPTimeline) {
@@ -63,7 +63,7 @@ export const animatePageIn = () => {
     // }
   };
   const animatTopNav = (tl: GSAPTimeline) => {
-    const topNav = document.getElementById("top-nav");
+    const topNav = document.getElementById('top-nav');
     if (topNav) {
       tl.set([topNav], {
         yPercent: 0,
@@ -80,10 +80,10 @@ export const animatePageIn = () => {
     //   });
     // }
   };
-  const bannnerOne = document.getElementById("banner-1");
-  const bannnerTwo = document.getElementById("banner-2");
-  const bannnerThree = document.getElementById("banner-3");
-  const bannnerFour = document.getElementById("banner-4");
+  const bannnerOne = document.getElementById('banner-1');
+  const bannnerTwo = document.getElementById('banner-2');
+  const bannnerThree = document.getElementById('banner-3');
+  const bannnerFour = document.getElementById('banner-4');
 
   if (bannnerOne && bannnerTwo && bannnerThree && bannnerFour) {
     const tl = gsap.timeline();
@@ -98,10 +98,10 @@ export const animatePageIn = () => {
 };
 
 export const animatePageOut = (href: string, router: AppRouterInstance) => {
-  const bannnerOne = document.getElementById("banner-1");
-  const bannnerTwo = document.getElementById("banner-2");
-  const bannnerThree = document.getElementById("banner-3");
-  const bannnerFour = document.getElementById("banner-4");
+  const bannnerOne = document.getElementById('banner-1');
+  const bannnerTwo = document.getElementById('banner-2');
+  const bannnerThree = document.getElementById('banner-3');
+  const bannnerFour = document.getElementById('banner-4');
   if (bannnerOne && bannnerTwo && bannnerThree && bannnerFour) {
     const tl = gsap.timeline();
     tl.set([bannnerOne, bannnerTwo, bannnerThree, bannnerFour], {
@@ -117,7 +117,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const animateInElements = (
   el: HTMLElement[],
-  trigger: MutableRefObject<null>
+  trigger: MutableRefObject<null>,
 ) => {
   return gsap.fromTo(
     el,
@@ -129,8 +129,8 @@ export const animateInElements = (
       duration: 0.6,
       scrollTrigger: {
         trigger: trigger.current,
-        start: "top 80%",
+        start: 'top 80%',
       },
-    }
+    },
   );
 };

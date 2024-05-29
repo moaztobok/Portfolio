@@ -1,61 +1,61 @@
-"use client";
-import { Moon, Sun } from "lucide-react";
-import Link from "next/link";
-import { useEffect } from "react";
+'use client';
+import { Moon, Sun } from 'lucide-react';
+import Link from 'next/link';
+import { useEffect } from 'react';
 
 const NavOther = () => {
   useEffect(() => {
-    const html = document.querySelector("html");
-    if (localStorage.getItem("theme")) {
-      if (localStorage.getItem("theme") === "dark") {
-        if (html) html.classList.add("dark");
+    const html = document.querySelector('html');
+    if (localStorage.getItem('theme')) {
+      if (localStorage.getItem('theme') === 'dark') {
+        if (html) html.classList.add('dark');
       }
     } else {
-      if (window.matchMedia("(prefers-color-scheme:dark").matches) {
-        if (html) html.classList.add("dark");
+      if (window.matchMedia('(prefers-color-scheme:dark').matches) {
+        if (html) html.classList.add('dark');
       }
     }
   }, []);
   const handleTheme = () => {
-    if (typeof window === "undefined") return;
+    if (typeof window === 'undefined') return;
     else {
-      const html = document.querySelector("html");
+      const html = document.querySelector('html');
       if (!html) return;
-      if (!html.classList.contains("dark")) {
-        html.classList.add("dark");
-        localStorage.setItem("theme", "dark");
+      if (!html.classList.contains('dark')) {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
       } else {
-        html.classList.remove("dark");
-        localStorage.setItem("theme", "light");
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
       }
     }
   };
   return (
     <div
-      className="absolute bottom-full w-full flex justify-between z-30 p-4"
+      className="absolute bottom-full z-30 flex w-full justify-between p-4"
       id="top-nav"
     >
       <button
-        className="w-8 h-8 aspect-square rounded-full bg-primary relative"
+        className="relative aspect-square h-8 w-8 rounded-full bg-primary"
         onClick={handleTheme}
       >
         <Sun
-          className="w-full h-full rotate-0 left-0 top-0 absolute  scale-75 transition-all dark:-rotate-90 dark:scale-0  fill-primary-foreground stroke-primary-foreground"
+          className="absolute left-0 top-0 h-full w-full rotate-0  scale-75 fill-primary-foreground stroke-primary-foreground transition-all  dark:-rotate-90 dark:scale-0"
           size={24}
         />
 
         <Moon
-          className="w-full h-full  left-0 top-0 rotate-90 scale-0 absolute  transition-all dark:rotate-0 dark:scale-75  fill-primary-foreground stroke-primary-foreground"
+          className="absolute left-0  top-0 h-full w-full rotate-90 scale-0  fill-primary-foreground stroke-primary-foreground transition-all  dark:rotate-0 dark:scale-75"
           size={24}
         />
       </button>
 
-      <div className="text-primary flex gap-2">
-        <Link href={"https://www.behance.net/MoazTobok"}>Behance</Link>
-        {" /"}
-        <Link href={"https://www.instagram.com/moaztobok/"}>Instagram</Link>
-        {" /"}
-        <Link href={"https://www.linkedin.com/in/moaztobok/"}>LinkedIn</Link>
+      <div className="flex gap-2 text-primary">
+        <Link href={'https://www.behance.net/MoazTobok'}>Behance</Link>
+        {' /'}
+        <Link href={'https://www.instagram.com/moaztobok/'}>Instagram</Link>
+        {' /'}
+        <Link href={'https://www.linkedin.com/in/moaztobok/'}>LinkedIn</Link>
       </div>
     </div>
   );

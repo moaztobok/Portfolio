@@ -1,6 +1,6 @@
-"use client";
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+'use client';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const followerRef = useRef<HTMLDivElement>(null);
@@ -27,17 +27,17 @@ const CustomCursor = () => {
       xPercent: 0,
       yPercent: 0,
     });
-    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener('mousemove', moveCursor);
   }, []);
   return (
     <div>
       <div
         ref={cursorRef}
-        className="w-2 h-2 rounded fixed bg-primary pointer-events-none"
+        className="pointer-events-none fixed h-2 w-2 rounded bg-primary"
       ></div>
       <div
         ref={followerRef}
-        className="w-10 h-10 rounded-full fixed border  border-primary z-[999] pointer-events-none"
+        className="pointer-events-none fixed z-[999] h-10 w-10  rounded-full border border-primary"
       ></div>
     </div>
   );

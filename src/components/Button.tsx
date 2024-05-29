@@ -1,6 +1,6 @@
-import React from "react";
-import { Button as ShadButton } from "./ui/button";
-import { cn } from "@/lib/utils";
+import React from 'react';
+import { Button as ShadButton } from './ui/button';
+import { cn } from '@/lib/utils';
 const Button = ({
   label,
   icon,
@@ -13,11 +13,11 @@ const Button = ({
   return (
     <ShadButton
       className={cn(
-        "hover:bg-primary/25 rounded-none duration-200 transition-all min-w-32 py-2 px-4 text-primary border border-primary  bg-primary-foreground/5 backdrop-blur-lg",
-        className
+        'min-w-32 rounded-none border border-primary bg-primary-foreground/5 px-4 py-2 text-primary backdrop-blur-lg transition-all  duration-200 hover:bg-primary/25',
+        className,
       )}
     >
-      {label} {icon ? icon : ""}
+      {label} {icon ? icon : ''}
     </ShadButton>
   );
 };

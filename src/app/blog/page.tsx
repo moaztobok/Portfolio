@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const BlogPage = () => {
   return (
     <section>
-      <h1 className="text-7xl font-extrabold text-center mt-10">Blog</h1>
+      <h1 className="mt-10 text-center text-7xl font-extrabold">Blog</h1>
     </section>
   );
 };
