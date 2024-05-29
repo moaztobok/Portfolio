@@ -3,26 +3,8 @@ import { animateInElements } from "@/utils/animations";
 import { CircleArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import AmazightIcon1 from "./AmazightIcon1";
-const info = [
-  {
-    title: "Design guidance",
-    description:
-      "Designing for you considering your needs, preferences and behaviors",
-    icon: <AmazightIcon1 />,
-  },
-  {
-    title: "Web development",
-    description:
-      "Web development creates and maintains websites, involving tasks from interface design to functionality implementation",
-    icon: <AmazightIcon1 />,
-  },
-  {
-    title: "Art direction",
-    description:
-      "guiding the visual elements of a project, ensuring a cohesive and impactful aesthetic across various creative mediums.",
-    icon: <AmazightIcon1 />,
-  },
-];
+import AmazightIcon2 from "./AmazightIcon2";
+
 const Capabilities = () => {
   const trigger = useRef(null);
   const el0Ref = useRef(null);
@@ -56,22 +38,34 @@ const Capabilities = () => {
             ref={el0Ref}
             className="lg:ps-6 flex flex-col gap-3 mt-4 text-primary  w-3/4"
           >
-            <p className="text-3xl font-semibold">{info[0].title}</p>
-            <p className="lg:w-5/6">{info[0].description}</p>
+            <AmazightIcon1 />
+            <p className="text-3xl font-semibold">Design guidance</p>
+            <p className="lg:w-5/6">
+              Designing for you considering your needs, preferences and
+              behaviors
+            </p>
           </div>
           <div
             ref={el1Ref}
             className="lg:ps-6 flex flex-col gap-3 mt-4 text-primary  w-3/4"
           >
-            <p className="text-3xl font-semibold">{info[1].title}</p>
-            <p className="lg:w-5/6">{info[1].description}</p>
+            <AmazightIcon2 />
+            <p className="text-3xl font-semibold">Web development</p>
+            <p className="lg:w-5/6">
+              Web development creates and maintains websites, involving tasks
+              from interface design to functionality implementation
+            </p>
           </div>
           <div
             ref={el2Ref}
             className="lg:ps-6 flex flex-col gap-3 mt-4 text-primary  w-3/4"
           >
-            <p className="text-3xl font-semibold">{info[2].title}</p>
-            <p className="lg:w-5/6">{info[2].description}</p>
+            <AmazightIcon1 />
+            <p className="text-3xl font-semibold">Art direction</p>
+            <p className="lg:w-5/6">
+              guiding the visual elements of a project, ensuring a cohesive and
+              impactful aesthetic across various creative mediums
+            </p>
           </div>
         </div>
       </div>
